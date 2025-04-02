@@ -8,6 +8,8 @@ export const metadata: Metadata = {
   },
 }
 
+import { PageTransition } from '@/components/page-transition'
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -27,7 +29,9 @@ export default function RootLayout({
           href="/blog/feed.xml"
         />
       </head>
-      <body className="text-gray-950 antialiased">{children}</body>
+      <body className="text-gray-950 antialiased">
+        <PageTransition>{children}</PageTransition>
+      </body>
     </html>
   )
 }

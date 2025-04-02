@@ -71,14 +71,14 @@ function Sitemap() {
       <div>
         <SitemapHeading>Support</SitemapHeading>
         <SitemapLinks>
-          <SitemapLink href="#">Help center</SitemapLink>
-          <SitemapLink href="#">Community</SitemapLink>
+          <SitemapLink href="/help">Help center</SitemapLink>
+          <SitemapLink href="/community">Community</SitemapLink>
         </SitemapLinks>
       </div>
       <div>
         <SitemapHeading>Company</SitemapHeading>
         <SitemapLinks>
-          <SitemapLink href="#">Terms of service</SitemapLink>
+          <SitemapLink href="/terms">Terms of service</SitemapLink>
           <SitemapLink href="#">Privacy policy</SitemapLink>
         </SitemapLinks>
       </div>

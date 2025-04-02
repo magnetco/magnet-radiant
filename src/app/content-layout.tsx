@@ -1,19 +1,24 @@
 
-'use client'
-
-import { PropsWithChildren } from 'react'
-import { motion } from 'framer-motion'
-
-export default function ContentLayout({ children }: PropsWithChildren) {
+export default function ContentLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode
+}>) {
   return (
-    <motion.div
-      className="w-full"
-      initial={{ opacity: 0, scale: 0.95 }}
-      animate={{ opacity: 1, scale: 1 }}
-      exit={{ opacity: 0, scale: 0.95 }}
-      transition={{ duration: 0.75, ease: 'easeInOut' }}
-    >
+    <>
+      <head>
+        <link
+          rel="stylesheet"
+          href="https://api.fontshare.com/css?f%5B%5D=switzer@400,500,600,700&amp;display=swap"
+        />
+        <link
+          rel="alternate"
+          type="application/rss+xml"
+          title="The Radiant Blog"
+          href="/blog/feed.xml"
+        />
+      </head>
       {children}
-    </motion.div>
-  )
+    </>
+  );
 }
